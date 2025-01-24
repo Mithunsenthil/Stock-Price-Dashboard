@@ -115,9 +115,21 @@ nifty_50_tickers = [
 symbol_or_name = st.selectbox("Select Nifty 50 Stock", nifty_50_tickers)
 
 # Time Interval
-interval = st.selectbox("Select Time Interval", ["1d", "1wk", "1mo","1yr"])
+interval = st.selectbox("Select Time Interval", ["1d", "1wk", "1mo", "1y", "3y", "5y"])
+
+# Set the end date to today
 end_date = datetime.datetime.now()
-start_date = end_date - datetime.timedelta(days=365)  # default to 1 year of data
+
+# Set the start date based on the selected interval
+if interval == "1y":
+    start_date = end_date - datetime.timedelta(days=365)
+elif interval == "3y":
+    start_date = end_date - datetime.timedelta(days=365*3)
+elif interval == "5y":
+    start_date = end_date - datetime.timedelta(days=365*5)
+else:
+    # For intervals like "1d", "1wk", "1mo", we don't change the start date much, as those intervals are relatively short
+    start_date = end_date - datetime.timedelta(days=1)
 
 # Function to fetch stock data using yfinance
 def fetch_stock_data(symbol, interval, start_date, end_date):
