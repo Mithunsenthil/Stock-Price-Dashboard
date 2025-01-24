@@ -2,28 +2,68 @@
 
 ## Overview
 
-Welcome to the **Real-Time Stock Price Dashboard** built using **Streamlit** and **yfinance**! This web application provides real-time stock data for major Nifty 50 companies. Users can select a stock from a list of top companies, choose the desired time interval (ranging from minutes to years), and view the stock's price movements over time, along with other important details like open, close, high, low, and volume.
-
-The dashboard allows users to quickly visualize the stock data with an interactive line chart and access key stock information, including market capitalization, sector, and company name.
+The **Real-Time Stock Price Dashboard**, built with **Streamlit** and **yfinance**, provides real-time stock data for major Nifty 50 companies. Users can select a stock, set a time interval (ranging from minutes to years), and explore stock price trends, key metrics, and more. The dashboard combines interactivity with insightful visualizations for stock analysis.
 
 ---
 
 ## Features
 
-- **Select Stock Ticker**: Choose from a list of major Nifty 50 companies or enter a stock symbol directly.
-- **Time Interval Options**: Choose the time interval for stock data, ranging from 1 minute to multiple years.
-- **Stock Overview**: Displays real-time stock details, including company name, sector, market capitalization, and more.
-- **Interactive Line Chart**: View the closing price trends over the selected time range.
-- **Stock Data Table**: View detailed stock data for any given time period, including open, close, high, low, and volume.
+- **Stock Selection**: Pick from a dropdown of Nifty 50 stocks or manually enter a stock ticker.
+- **Customizable Time Intervals**: Analyze stock data over various durations (e.g., 1 minute, 1 day, 1 month, up to 5 years).
+- **Real-Time Stock Overview**: Get key details such as:
+  - Company Name
+  - Sector
+  - Market Capitalization
+  - Open, Close, High, Low, and Volume data
+- **Interactive Line Chart**: Visualize closing price trends over the selected time period.
+- **Stock Data Table**: Review comprehensive stock data for further analysis.
 
 ---
 
 ## Installation
-
-To get started with this project, you'll need to set up a local environment. Follow these steps:
 
 ### 1. Clone the repository:
 
 ```bash
 git clone https://github.com/yourusername/stock-price-dashboard.git
 cd stock-price-dashboard
+```
+
+### 2. Set up a virtual environment:
+
+```bash
+python -m venv venv
+source venv/bin/activate  # For Windows: `venv\Scripts\activate`
+```
+
+### 3. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Usage
+
+1. **Run the app**:  
+   Start the dashboard using the command:  
+   ```bash
+   streamlit run app.py
+   ```
+
+2. **Interact with the app**:
+   - **Stock Selection**: Choose a stock (e.g., TCS.NS) from the dropdown or enter a ticker.
+   - **Time Interval**: Set a duration (e.g., 1 year or 3 years).
+   - **View Data**: Access key metrics, detailed stock information, and interactive visualizations.
+
+---
+
+## Technologies Used
+
+- **Frontend**: Streamlit for web-based interactivity.
+- **Backend**: yfinance for fetching real-time stock data.
+- **Data Analysis**: pandas for data processing and manipulation.
+- **Visualization**: Streamlit’s plotting capabilities for charts and tables.
+
+---
