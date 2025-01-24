@@ -115,7 +115,7 @@ nifty_50_tickers = [
 symbol_or_name = st.selectbox("Select Nifty 50 Stock", nifty_50_tickers)
 
 # Time Interval
-interval = st.selectbox("Select Time Interval", ["1m", "5m", "15m", "30m", "60m", "1d", "1wk", "1mo"])
+interval = st.selectbox("Select Time Interval", ["1d", "1wk", "1mo","1yr"])
 end_date = datetime.datetime.now()
 start_date = end_date - datetime.timedelta(days=365)  # default to 1 year of data
 
